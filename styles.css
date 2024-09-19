@@ -1,0 +1,110 @@
+
+:root {
+  --learn-transform: rotate( -20deg ) scale( 1.8 ) translate( -250px, 150px );
+  --buy-transform:   rotate( 20deg ) scale( 1.8 ) translate( 320px, 80px );
+  --play-transform:  rotate( 120deg ) scale( 1.8 ) translate( 220px, -290px );
+}
+
+html {
+  background-image: url( "./stars.png" );
+  background-size: cover;
+  overflow: hidden;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.moving-image {
+  background-image: url( "./3Struts.png" );
+  background-size: cover;
+
+  position: absolute;
+  inset: 0;
+}
+
+.links {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.learn-home {
+  animation: learnToHome 300ms ease-in-out;
+}
+@keyframes learnToHome {
+  from {
+    transform: var(--learn-transform);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.home-learn {
+  transform: var(--learn-transform);
+  animation: homeToLearn 600ms ease-in-out;
+}
+@keyframes homeToLearn {
+  from {
+    transform: none;
+  }
+  to {
+    transform: var(--learn-transform);
+  }
+}
+
+.buy-home {
+  animation: buyToHome 300ms ease-in-out;
+}
+@keyframes buyToHome {
+  from {
+    transform: var(--buy-transform);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.home-buy {
+  transform: var(--buy-transform);
+  animation: homeToBuy 600ms ease-in-out;
+}
+@keyframes homeToBuy {
+  from {
+    transform: none;
+  }
+  to {
+    transform: var(--buy-transform);
+  }
+}
+
+.play-home {
+  animation: playToHome 300ms ease-in-out;
+}
+@keyframes playToHome {
+  from {
+    transform: var(--play-transform);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.home-play {
+  transform: var(--play-transform);
+  animation: homeToPlay 600ms ease-in-out;
+}
+@keyframes homeToPlay {
+  from {
+    transform: none;
+  }
+  to {
+    transform: var(--play-transform);
+  }
+}
+
+h1 {
+  color: white;
+  margin: auto;
+}
+
